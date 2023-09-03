@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meeting Management</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h2>MEETING SLOTS</h2>
+    <section class="slots">
+      <div class="slot" data-time="5:00 PM" data-available="2">
+        5:00 PM (2 slots available)
+      </div>
+      <div class="slot" data-time="6:00 PM" data-available="1">
+        6:00 PM (1 slots available)
+      </div>
+      <div class="slot" data-time="7:00 PM" data-available="3">
+        7:00 PM (3 slots available)
+      </div>
+    </section>
+    <section class="slot-form">
+      <h2>BOOK A SLOT</h2>
+      <form id="booking-form">
+        <label for="name">Name</label>
+        <input type="text" id="name" />
+        <label for="email">Email</label>
+        <input type="email" id="email" />
+        <button type="submit">Book Slot</button>
+      </form>
+    </section>
+    <section class="bookings">
+      <h2>BOOKINGS</h2>
+      <div class="bookings-list">
+        <!-- <ul class="slot">
+          <li>Name : sanju</li>
+          <li>Email : sanju@gmail.com</li>
+          <li>Time : 7:00 PM</li>
+          <button id="delete-slot-btn">Cancel Meeting</button>
+        </ul> -->
+      </div>
+    </section>
+    <script src="index.js"></script>
+  </body>
+</html>
