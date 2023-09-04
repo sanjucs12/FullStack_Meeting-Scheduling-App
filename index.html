@@ -7,29 +7,32 @@
     <link rel="stylesheet" href="./CRUD CRUD/style.css" />
   </head>
   <body>
-    <h2>MEETING SLOTS</h2>
-    <section class="slots">
-      <div class="slot" data-time="5:00 PM" data-available="2">
-        5:00 PM (2 slots available)
-      </div>
-      <div class="slot" data-time="6:00 PM" data-available="2">
-        6:00 PM (2 slots available)
-      </div>
-      <div class="slot" data-time="7:00 PM" data-available="3">
-        7:00 PM (3 slots available)
-      </div>
-    </section>
-    <section class="slot-form">
-      <h2>BOOK A SLOT</h2>
-      <form id="booking-form">
-        <label for="name">Name</label>
-        <input type="text" id="name" />
-        <label for="email">Email</label>
-        <input type="email" id="email" />
-        <button type="submit">Book Slot</button>
-        <button id="cancel-btn">Cancel</button>
-      </form>
-    </section>
+    <h1>MEETING MANAGEMENT</h1>
+    <div class="container-1">
+      <section class="slots">
+        <div class="slot" data-time="5:00 PM" data-available="2">
+          5:00 PM (2 slots available)
+        </div>
+        <div class="slot" data-time="6:00 PM" data-available="2">
+          6:00 PM (2 slots available)
+        </div>
+        <div class="slot" data-time="7:00 PM" data-available="3">
+          7:00 PM (3 slots available)
+        </div>
+      </section>
+      <section class="slot-form">
+        <h3>BOOK A SLOT</h3>
+        <form id="booking-form">
+          <label for="name">Name</label>
+          <input type="text" id="name" />
+          <label for="email">Email</label>
+          <input type="email" id="email" />
+          <button type="submit">Book Slot</button>
+          <button id="cancel-btn">Cancel</button>
+        </form>
+      </section>
+    </div>
+
     <section class="bookings">
       <h2>BOOKINGS</h2>
       <div class="bookings-list"></div>

@@ -1,4 +1,4 @@
-.slot {
+/* .slot {
   margin: 10px;
   padding: 10px;
   border: 1px solid #ccc;
@@ -8,4 +8,166 @@
 
 .slot-form {
   display: none;
+} */
+
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+body h1 {
+  text-align: center;
+}
+
+/* Header Styles */
+header {
+  background-color: #34495e;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+header h1 {
+  font-size: 36px;
+  margin: 0;
+}
+
+.container-1 {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+/* Meeting Slots Styles */
+.slots {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 5px;
+  margin: 20px;
+}
+
+.slot {
+  width: 200px;
+  height: 30px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.slot:hover {
+  background-color: #3498db;
+  color: #fff;
+}
+
+/* Slot Form Styles */
+.slot-form {
+  display: none;
+  text-align: center;
+}
+
+#booking-form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  margin: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.slot-form h2 {
+  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.slot-form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.slot-form input[type="text"],
+.slot-form input[type="email"] {
+  width: 95%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 16px;
+}
+
+.slot-form button[type="submit"],
+.slot-form #cancel-btn {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 3px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.slot-form button[type="submit"]:hover,
+.slot-form #cancel-btn:hover {
+  background-color: #2980b9;
+}
+
+/* Bookings Styles */
+.bookings {
+  margin: 20px;
+}
+
+.bookings h2 {
+  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.bookings-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+}
+
+.booked-slot {
+  height: 150px;
+  width: 250px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  list-style-type: none;
+}
+
+.booked-slot li {
+  margin-top: 10px;
+}
+
+.booked-slot button#delete-slot-btn {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  margin-top: 10px;
+  padding: 10px 10px;
+  border-radius: 3px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.booked-slot button#delete-slot-btn:hover {
+  background-color: #c0392b;
 }

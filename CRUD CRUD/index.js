@@ -13,6 +13,13 @@ slots.forEach((slot) => {
   });
 });
 
+//FORM CANCEL BUTTON FUNCTION
+formCancelBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  slotForm.style.display = "none";
+  selectedSlot = null;
+});
+
 //FORM SUBMIT HANDLER FUNCTION
 
 bookingForm.addEventListener("submit", formSubmitHandler);
