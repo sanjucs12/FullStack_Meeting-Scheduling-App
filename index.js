@@ -2,6 +2,7 @@ const slots = document.querySelectorAll(".slot");
 const slotForm = document.querySelector(".slot-form");
 const bookingForm = document.getElementById("booking-form");
 const bookedSlots = document.querySelector(".bookings-list");
+const formCancelBtn = document.getElementById("cancel-btn");
 let updatedSlots = [...slots];
 
 ///SLOTS BUTTONS HANDLER FUNCTION
@@ -11,6 +12,13 @@ slots.forEach((slot) => {
     selectedSlot = slot;
     slotForm.style.display = "block";
   });
+});
+
+//FORM CANCEL BUTTON FUNCTION
+formCancelBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  slotForm.style.display = "none";
+  selectedSlot = null;
 });
 
 //FORM SUBMIT HANDLER FUNCTION
@@ -32,7 +40,7 @@ async function formSubmitHandler(e) {
     };
     try {
       const response = await axios.post(
-        "https://crudcrud.com/api/f250da4f356046ec89fbb8c35f975a2a/slots",
+        "http://localhost:3000/slots/add-slot",
         bookingDetails
       );
       console.log(response.data);
@@ -43,6 +51,7 @@ async function formSubmitHandler(e) {
       slotForm.style.display = "none";
     } catch (err) {
       console.log(err);
+      alert("EMAIL ALREADY EXISTS");
     }
   } else {
     alert("PLEASE ENTER REQUIRED FIELDS...!");
@@ -93,9 +102,7 @@ function cancelMeetingHandler(e, obj) {
   const slotSelectedToDelete = e.target.closest(".booked-slot");
   //   console.log(slotSelectedToDelete);
   axios
-    .delete(
-      `https://crudcrud.com/api/f250da4f356046ec89fbb8c35f975a2a/slots/${obj._id}`
-    )
+    .delete(`http://localhost:3000/slots/delete-slot/${obj.id}`)
     .then((res) => {
       //   console.log(res);
       slotSelectedToDelete.remove();
@@ -130,9 +137,7 @@ function updateSlotsOnCancelMeet(obj) {
 window.addEventListener("DOMContentLoaded", getRequest);
 async function getRequest() {
   try {
-    const response = await axios.get(
-      "https://crudcrud.com/api/f250da4f356046ec89fbb8c35f975a2a/slots"
-    );
+    const response = await axios.get("http://localhost:3000/slots/get-slots");
     // console.log(response.data);
     updateSlotsOnGetRequest(response.data);
     response.data.map((slot) => {
